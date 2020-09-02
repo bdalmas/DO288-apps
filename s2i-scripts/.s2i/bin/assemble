@@ -15,9 +15,15 @@ cp -Rf /tmp/src/*.html ./
 
 DATE=`date "+%b %d, %Y @ %H:%M %p"`
 
+current_time=$(date +"%d-%m-%Y %H:%M:%S")
+
+
+
 echo "---> Creating info page"
 echo "Page built on $DATE" >> ./info.html
 echo "Proudly served by Apache HTTP Server version $HTTPD_VERSION" >> ./info.html
+
+echo $current_time " is the current time" >> ./mytime.html
 
 ######## CUSTOMIZATION ENDS HERE ############
 
